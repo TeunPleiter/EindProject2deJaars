@@ -1,0 +1,7 @@
+project functies:
+breeze gebruikersbeheer (login/out)
+meerdere zoekopties
+rechten op bepaalde films (leeftijdbeperking, admin, etc)
+
+applicatie werking:
+frontend + backend volledig laravel (php love)

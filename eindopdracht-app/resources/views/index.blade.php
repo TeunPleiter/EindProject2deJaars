@@ -7,7 +7,7 @@
     <title>EPJ</title>
     <style>
         body {
-            background-image: url('https://t4.ftcdn.net/jpg/02/71/50/69/360_F_271506927_WWFfd92jDIIDx6DgMflakU14o5jRPgBm.jpg');
+            background-image: url(https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;

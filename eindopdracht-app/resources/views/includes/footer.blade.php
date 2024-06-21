@@ -43,7 +43,7 @@
 
     <!-- Footer -->
     <div class="footer">
-        <div id="Copyright">© Copyright 2024 EPJ</div>
+        <div id="Copyright">© Copyright 2024 EPJ<button>vvvvv</button><button>aaaaa</button></div>
     </div>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     @include('includes.head')
     <meta charset="UTF-8">
@@ -7,7 +8,8 @@
     <title>EPJ</title>
     <style>
         body {
-            background-image: url(https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-image: url('images/image.png');
+            /* Adjust the path as per your file location */
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -15,22 +17,22 @@
             height: 100vh;
             width: 100vw;
         }
-        .container {
-            height: 100%;
-        }
     </style>
+
 </head>
+
 <body>
-<div class="container">
-    <header class="row">
-        @include('includes.header')
-    </header>
-    <div id="main" class="row">
-        @yield('content')
+    <div class="container">
+        <header class="row">
+            @include('includes.header')
+        </header>
+        <div id="main" class="row">
+            @yield('content')
+        </div>
+        <footer class="row">
+            @include('includes.footer')
+        </footer>
     </div>
-    <footer class="row">
-        @include('includes.footer')
-    </footer>
-</div>
 </body>
+
 </html>

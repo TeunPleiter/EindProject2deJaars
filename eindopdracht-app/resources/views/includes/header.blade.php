@@ -37,17 +37,20 @@
             text-decoration: none;
             font-weight: bold;
             position: absolute;
-            left: 20px; 
+            right: 20px; 
         }
 
         .nav {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 70px;
         }
 
         .nav li {
             display: inline;
+            border: 1px solid white;
+            border-radius: 20px;
+            padding: 10px 20px;
         }
 
         .nav a {
@@ -65,7 +68,7 @@
 <body>
     <div class="navbar">
         <div class="navbar-inner">
-            <a id="logo" href="/">test</a>
+            <a id="logo" href="/">Go back</a>
             <ul class="nav">
                 <li><a href="/home">Home</a></li>
                 <li><a href="/contact">Contact</a></li>

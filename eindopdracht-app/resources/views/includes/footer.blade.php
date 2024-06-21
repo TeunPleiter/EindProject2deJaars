@@ -20,7 +20,7 @@
             position: absolute;
             bottom: 10px;
             left: 10px;
-            font-size: 0.8em;
+            font-size: 1.0em;
         }
     </style>
 </head>

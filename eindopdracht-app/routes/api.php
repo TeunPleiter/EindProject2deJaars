@@ -23,6 +23,4 @@ Route::get('/example', function () {
     return response()->json(['message' => 'Hello, world!']);
 });
 
-
-
 Route::get('/movies', [MovieController::class, 'index']);

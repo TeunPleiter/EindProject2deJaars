@@ -20,16 +20,13 @@ class MovieController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'movie_type' => 'required|integer',
             'title' => 'required|string|max:255',
-            'description' => 'required|string',
-            'release_date' => 'required|date',
+            'year' => 'required|integer',
+            'minutes' => 'required|integer'
         ]);
 
-        $movie = Movie::create([
-            'title' => $request->input('title'),
-            'description' => $request->input('description'),
-            'release_date' => $request->input('release_date'),
-        ]);
+        $movie = Movie::create($request->all());
 
         return response()->json($movie, Response::HTTP_CREATED);
     }
@@ -45,9 +42,10 @@ class MovieController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
+            'movie_type' => 'sometimes|required|integer',
             'title' => 'sometimes|required|string|max:255',
-            'description' => 'sometimes|required|string',
-            'release_date' => 'sometimes|required|date',
+            'year' => 'sometimes|required|integer',
+            'minutes' => 'sometimes|required|integer'
         ]);
 
         $movie = Movie::findOrFail($id);

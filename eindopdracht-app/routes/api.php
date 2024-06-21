@@ -15,12 +15,19 @@ use App\Http\Controllers\Api\MovieController;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
-Route::get('/example', function () {
-    return response()->json(['message' => 'Hello, world!']);
-});
+// Route to get all movies
+Route::get('movies', [MovieController::class, 'index'])->name('movies.index');
 
-Route::get('/movies', [MovieController::class, 'index']);
+// Route to create a new movie
+Route::post('movies', [MovieController::class, 'store'])->name('movies.store');
+
+// Route to get a specific movie by ID
+Route::get('movies/{movie}', [MovieController::class, 'show'])->name('movies.show');
+
+// Route to update a specific movie by ID
+Route::put('movies/{movie}', [MovieController::class, 'update'])->name('movies.update');
+Route::patch('movies/{movie}', [MovieController::class, 'update'])->name('movies.update');
+
+// Route to delete a specific movie by ID
+Route::delete('movies/{movie}', [MovieController::class, 'destroy'])->name('movies.destroy');

@@ -24,3 +24,4 @@ Route::post('/movies/create', [MovieController::class, 'store'])->name('movies.s
 Route::put('/movies/update/{id}', [MovieController::class, 'update'])->name('movies.update');
 
 Route::delete('/movies/delete/{id}', [MovieController::class, 'destroy'])->name('movies.destroy');
+

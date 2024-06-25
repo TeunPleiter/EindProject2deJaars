@@ -16,18 +16,11 @@ use App\Http\Controllers\Api\MovieController;
 */
 
 
-// Route to get all movies
-Route::get('movies', [MovieController::class, 'index'])->name('movies.index');
+Route::get('/movies', [MovieController::class, 'index'])->name('movies.index');
+Route::get('/movies/{id}', [MovieController::class, 'show'])->name('movies.show');
 
-// Route to create a new movie
-Route::post('movies', [MovieController::class, 'store'])->name('movies.store');
+Route::post('/movies/create', [MovieController::class, 'store'])->name('movies.store');
 
-// Route to get a specific movie by ID
-Route::get('movies/{movie}', [MovieController::class, 'show'])->name('movies.show');
+Route::put('/movies/update/{id}', [MovieController::class, 'update'])->name('movies.update');
 
-// Route to update a specific movie by ID
-Route::put('movies/{movie}', [MovieController::class, 'update'])->name('movies.update');
-Route::patch('movies/{movie}', [MovieController::class, 'update'])->name('movies.update');
-
-// Route to delete a specific movie by ID
-Route::delete('movies/{movie}', [MovieController::class, 'destroy'])->name('movies.destroy');
+Route::delete('/movies/delete/{id}', [MovieController::class, 'destroy'])->name('movies.destroy');

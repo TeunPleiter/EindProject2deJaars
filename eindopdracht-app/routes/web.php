@@ -20,6 +20,11 @@ Route::get('/home', function () {
     return view('layouts.pages.home');
 });
 
+// Route for login page
+Route::get('/login', function () {
+    return view('layouts.pages.login');
+});
+
 // Route for contact page
 Route::get('/contact', function () {
     return view('layouts.pages.contact');

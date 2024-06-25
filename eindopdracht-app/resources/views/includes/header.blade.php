@@ -5,29 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minimalistic Navbar</title>
     <style>
-        
         body, ul {
             margin: 0;
             padding: 0;
         }
 
-        
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: #333;
+            padding-top: 60px; /* Adjust according to the height of the navbar */
         }
 
-        
         .navbar {
             background-color: transparent;
             padding: 10px 20px;
-            position: relative;
+            position: fixed; /* Make the navbar fixed */
+            width: 100%; /* Make the navbar span the full width of the page */
+            top: 0; /* Position the navbar at the top */
+            left: 0; /* Ensure the navbar starts from the left edge */
+            z-index: 1000; /* Ensure the navbar is above other content */
         }
 
         .navbar-inner {
             display: flex;
-            align-items: center;
+            align-items: center; /* Align items vertically */
             justify-content: center;
         }
 
@@ -44,25 +46,39 @@
             list-style: none;
             display: flex;
             gap: 70px;
+            align-items: center; /* Align items vertically within the ul */
         }
 
         .nav li {
-            display: inline;
-            border: 1px solid white;
+            display: flex; /* Use flex to align content within li */
+            align-items: center; /* Center items vertically */
             border-radius: 20px;
             padding: 10px 20px;
         }
 
-        .nav a {
+        .nav a,
+        .nav button {
             text-decoration: none;
             color: white;
             font-size: 1em;
             transition: color 0.3s;
+            border: 1px solid white;
+            background: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font: inherit; /* Ensures button text inherits font styling from parent */
         }
 
-        .nav a:hover {
+        .nav a:hover,
+        .nav button:hover {
             color: #FF2400;
         }
+
+        .logout-form {
+            display: inline; /* Ensure form and button appear inline */
+        }
+
     </style>
 </head>
 <body>
@@ -72,6 +88,12 @@
                 <li><a href="/home">Home</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li><a href="/login">Login</a></li>
+                <li>
+                    <form class="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
             </ul>
         </div>
     </div>

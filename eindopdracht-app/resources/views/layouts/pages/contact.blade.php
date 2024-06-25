@@ -1,6 +1,4 @@
 @extends('layouts.default')
-@extends ('includes.header')
-@extends ('includes.footer')
 @section('content')
 <style>
     .contact-container {

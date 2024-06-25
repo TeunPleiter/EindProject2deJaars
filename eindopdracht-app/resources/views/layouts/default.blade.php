@@ -4,6 +4,7 @@
     <title>@yield('title', 'Default Title')</title>
 </head>
 <body>
+    
     <header>
         <h1>My Application</h1>
     </header>

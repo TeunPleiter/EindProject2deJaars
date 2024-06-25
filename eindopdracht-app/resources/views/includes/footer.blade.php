@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* Apply styles to the body to achieve full-screen layout */
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            height: 100vh; /* Full viewport height */
+            height: 100vh; 
             width: 100%;
-            overflow: hidden; /* Hide scrollbars */
+            overflow: hidden; 
             display: flex;
             flex-direction: column;
             justify-content: space-between; /* Adjust vertical alignment */
-            position: relative; /* Ensure relative positioning for footer */
+            position: relative; 
         }
 
         /* Main content styling */
@@ -41,9 +41,11 @@
 <body>
    
 
-    <!-- Footer -->
-    <div class="footer">
-        <div id="Copyright">© Copyright 2024 EPJ<button>vvvvv</button><button>aaaaa</button></div>
+
+<div class="footer">
+        <a>
+            <img src="../../../../foto's/icons8-star-50.png" alt="Logo 1">
+        </a>
     </div>
 </body>
 </html>

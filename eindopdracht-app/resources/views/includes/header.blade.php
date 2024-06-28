@@ -45,7 +45,7 @@
         .nav {
             list-style: none;
             display: flex;
-            gap: 70px;
+            gap: 30px; /* Adjusted space between buttons */
             align-items: center; /* Align items vertically within the ul */
         }
 
@@ -53,19 +53,19 @@
             display: flex; /* Use flex to align content within li */
             align-items: center; /* Center items vertically */
             border-radius: 20px;
-            padding: 10px 20px;
+            padding: 5px 10px; /* Adjusted padding to make buttons smaller */
         }
 
         .nav a,
         .nav button {
             text-decoration: none;
             color: white;
-            font-size: 1em;
+            font-size: 0.9em; /* Adjusted font size */
             transition: color 0.3s;
             border: 1px solid white;
             background: none;
             border-radius: 20px;
-            padding: 10px 20px;
+            padding: 5px 10px; /* Adjusted padding to make buttons smaller */
             cursor: pointer;
             font: inherit; /* Ensures button text inherits font styling from parent */
         }
@@ -87,7 +87,7 @@
             <ul class="nav">
                 <li><a href="/home">Home</a></li>
                 <li><a href="/contact">Contact</a></li>
-                <li><a href="/login">Login</a></li>
+
                 <li>
                     <form class="logout-form" action="{{ route('logout') }}" method="POST">
                         @csrf

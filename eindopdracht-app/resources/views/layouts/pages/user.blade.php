@@ -1,1 +1,1 @@
-@extends('layouts.default')
+@extends('includes.footer')

@@ -13,14 +13,14 @@ Route::get('/login', function () {
 Route::post('/logout', function () {
     Auth::logout();
     return redirect('/login');
-
 })->name('logout');
+
 // Route for home page
 Route::get('/home', function () {
     return view('layouts.pages.home');
 });
 
-// Route for login page
+// Route for login page (duplicate, you can remove this if already defined)
 Route::get('/login', function () {
     return view('layouts.pages.login');
 });
@@ -49,6 +49,26 @@ Route::middleware('auth')->group(function () {
         return view('index');
     })->name('home'); // Added a name for the root route for better management
 });
+
+// New routes requiring authentication
+Route::middleware('auth')->group(function () {
+    Route::get('/allMovies', function () {
+        return view('layouts.pages.allMovies'); // Adjust the view path according to your structure
+    })->name('allMovies');
+
+    Route::get('/user', function () {
+        return view('layouts.pages.user'); // Adjust the view path according to your structure
+    })->name('user');
+
+    Route::get('/favorites', function () {
+        return view('layouts.pages.favorites'); // Adjust the view path according to your structure
+    })->name('favorites');
+    Route::get('/search', function () {
+        return view('layouts.pages.search'); // Adjust the view path according to your structure
+    })->name('search');
+});
+
+
 
 // Include default Laravel authentication routes
 require __DIR__ . '/auth.php';

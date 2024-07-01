@@ -16,4 +16,7 @@ class Movie extends Model
         'minutes'
     ];
 
+    public function favorites() {
+        return $this->hasMany(Favorite::class);
+    }
 }

@@ -2,7 +2,8 @@
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\FavoriteController;
+use App\Models\Movie;
 // Default route (root URL)
 
 // Route for login page
@@ -17,7 +18,8 @@ Route::post('/logout', function () {
 })->name('logout');
 // Route for home page
 Route::get('/home', function () {
-    return view('layouts.pages.home');
+    $movies = Movie::all();
+    return view('layouts.pages.home', ['movies' => $movies]);
 });
 
 // Route for login page
@@ -42,6 +44,12 @@ Route::get('/dashboard', function () {
 
 // Profile routes protected by auth middleware
 Route::middleware('auth')->group(function () {
+    Route::get('/addfavorite/{id}', [FavoriteController::class, 'addfavorite'])->name('addfavorite');
+    Route::get('/removefavorite/{id}', [FavoriteController::class, 'removefavorite'])->name('removefavorite');
+    Route::get('/showfavorites', [FavoriteController::class, 'showfavorites'])->name('showfavorites');
+
+
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

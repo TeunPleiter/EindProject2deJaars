@@ -5,7 +5,7 @@
 </head>
 <body style="background-color: red;">
 
-    @include('includes.header')
+
 
     <main>
         @yield('content')

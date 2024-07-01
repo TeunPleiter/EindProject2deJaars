@@ -76,7 +76,7 @@
     </div>
     <div class="footer">
         <button class="footer-button">
-            <a href="/allMovies">
+            <a href="/movies">
                 <i class="fas fa-camera-movie"></i>
                 All Movies
             </a>

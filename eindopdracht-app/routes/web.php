@@ -17,7 +17,7 @@ Route::post('/logout', function () {
 })->name('logout');
 
 // Route for home page
-Route::get('/home', function () {
+Route::get('/movies', function () {
     $movies = Movie::all();
     return view('layouts.pages.home', ['movies' => $movies]);
 });
@@ -46,7 +46,7 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/addfavorite/{id}', [FavoriteController::class, 'addfavorite'])->name('addfavorite');
     Route::get('/removefavorite/{id}', [FavoriteController::class, 'removefavorite'])->name('removefavorite');
-    Route::get('/showfavorites', [FavoriteController::class, 'showfavorites'])->name('showfavorites');
+    Route::get('/favorites', [FavoriteController::class, 'showfavorites'])->name('showfavorites');
 
 
 
@@ -67,10 +67,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/user', function () {
         return view('layouts.pages.user'); // Adjust the view path according to your structure
     })->name('user');
-
-    Route::get('/favorites', function () {
-        return view('layouts.pages.favorites'); // Adjust the view path according to your structure
-    })->name('favorites');
+;
     Route::get('/search', function () {
         return view('layouts.pages.search'); // Adjust the view path according to your structure
     })->name('search');

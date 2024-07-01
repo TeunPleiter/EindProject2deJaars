@@ -72,7 +72,7 @@
 
         .nav a:hover,
         .nav button:hover {
-            color: #FF2400;
+            color: #A9A9A9;
         }
 
         .logout-form {
@@ -85,7 +85,6 @@
     <div class="navbar">
         <div class="navbar-inner">
             <ul class="nav">
-                <li><a href="/home">Home</a></li>
                 <li><a href="/contact">Contact</a></li>
 
                 <li>

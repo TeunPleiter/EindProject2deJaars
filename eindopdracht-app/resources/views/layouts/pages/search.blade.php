@@ -1,67 +1,66 @@
 @extends('layouts.default')
 
 @section('content')
-<div class="container">
-    <div class="sidebar" id="sidebar">
-        <input type="text" class="search-input" placeholder="Search...">
-    </div>
-    <div class="main-content">
-        <h1>Search Page</h1>
-        <!-- Your search results or content here -->
-    </div>
-</div>
+<form class="search" action="">
+  <input type="search" placeholder="Search here..." required>
+  <button type="submit">Search</button>
+</form>   
 @endsection
 
 @section('styles')
 <style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-    }
 
-    .container {
-        display: flex;
-        height: calc(100vh - 60px); /* Full viewport height minus navbar height */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        padding-top: 60px; /* Ensure content starts below the navbar */
-        box-sizing: border-box;
-    }
+.search {
+  width: 500px;
+  height: 40px;
+  background: #444;
+  background: rgba(0,0,0,.2);
+  border-radius: 3px;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+}
 
-    .sidebar {
-        width: 30%;
-        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-        padding: 20px;
-        box-sizing: border-box;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
-        border-radius: 10px; /* Rounded corners */
-        margin-right: 20px; /* Space between sidebar and main content */
-    }
+.search input {
+  width: 370px;
+  padding: 10px 5px;
+  color: #ccc;
+  border: 0;
+  background: transparent;
+  border-radius: 3px 0 0 3px;
+}
 
-    .main-content {
-        width: 60%; /* Adjust width for a balanced look */
-        padding: 20px;
-        box-sizing: border-box;
-        text-align: center; /* Center text for main content */
-    }
+.search input:focus {
+  outline: 0;
+  background: transparent;
+}
 
-    .search-input {
-        width: 100%;
-        padding: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1.2em;
-        box-sizing: border-box;
-        transition: border-color 0.3s ease; /* Smooth border color transition */
-    }
+.search button {
+  width: 120px;
+  height: 40px;
+  color: #fff;
+  background: transparent;
+  border: 0;
+  border-left: 1px solid #fff;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
 
-    .search-input:focus {
-        border-color: #333; /* Darker border on focus */
-        outline: none; /* Remove default outline */
-    }
+.search button:hover {
+  background: #fff;
+  color: #444;
+}
+
+.search button:active {
+  box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+}
+
+.search button:focus {
+  outline: 0;
+}
 </style>
 @endsection
+
+@php
+    $hideSidebar = true;
+@endphp

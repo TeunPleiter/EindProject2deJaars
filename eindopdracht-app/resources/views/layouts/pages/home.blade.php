@@ -2,3 +2,6 @@
 @section('content')
    i am the home page
 @stop
+@php
+    $hideSidebar = true;
+@endphp

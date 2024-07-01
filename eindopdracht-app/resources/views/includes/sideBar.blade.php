@@ -33,17 +33,7 @@ body, html {
     box-sizing: border-box;
 }
 
-.sidebar {
-    width: 250px; /* Fixed width for sidebar */
-    background-color: rgba(255, 255, 255, 0.0); /* Semi-transparent background */
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 10px; /* Rounded corners */
-    position: fixed; /* Fixed positioning */
-    top: 20vh; /* Adjust vertical position */
-    left: 0;
-    z-index: 100; /* Ensure it is above other elements */
-}
+
 
 .sidebar.expanded {
     width: 300px; /* Expanded width when dropdown is shown */

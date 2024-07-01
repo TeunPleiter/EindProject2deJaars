@@ -33,10 +33,9 @@
             top: 0;
             bottom: 0;
             width: 250px;
-            background-color: #f4f4f4;
             padding: 20px;
             box-sizing: border-box;
-            overflow-y: auto;
+            overflow:none;
             top: 40vh;
             
         }

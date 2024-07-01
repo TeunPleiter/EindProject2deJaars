@@ -11,9 +11,22 @@ class FavoriteController extends Controller
     public function addfavorite(Request $request, $id)
     {
         $user = auth()->user();
-        $user->favorites()->create(['movie_id' => $id, 'user_id' => $user->id]);
-        return redirect()->route('showfavorites');
 
+        // Check if the favorite already exists
+        $existingFavorite = Favorite::where('user_id', $user->id)
+            ->where('movie_id', $id)
+            ->first();
+
+        if ($existingFavorite) {
+            // Return with an error message
+            return redirect()->route('showfavorites')->with('error', 'This movie is already in your favorites.');
+        }
+
+        // If the favorite does not exist, create it
+        $user->favorites()->create(['movie_id' => $id, 'user_id' => $user->id]);
+
+        // Redirect to /showfavorites route
+        return redirect()->route('showfavorites');
     }
 
     public function removefavorite(Request $request, $id)

@@ -19,6 +19,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            z-index: 1;
         }
         
         .user-info {

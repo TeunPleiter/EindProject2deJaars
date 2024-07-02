@@ -125,15 +125,6 @@
                 <button class="dropdown-item">a-z</button>
                 <button class="dropdown-item">recently added</button>
             </div>
-        </div>
-        <div class="main-content">
-            <h1>Main Content</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec urna sed leo aliquam elementum. Donec venenatis nisi id mauris ullamcorper, at venenatis eros fringilla. Nulla facilisi. Vestibulum eu felis et ligula bibendum cursus.</p>
-            <p>Phasellus blandit, ipsum in interdum feugiat, erat augue tincidunt mi, sed varius sem diam in ex. Nam vel erat ac leo venenatis tincidunt. Curabitur vitae interdum nulla. Nulla facilisi. Duis malesuada vel lorem eget condimentum.</p>
-            <p>Quisque vestibulum bibendum metus, sit amet sollicitudin orci dapibus sed. Vestibulum vitae lacinia nisi. Aliquam aliquam pharetra tellus, nec ullamcorper sapien scelerisque ac.</p>
-        </div>
-    </div>
-
     <script>
         function toggleDropdown() {
             var dropdown = document.getElementById('filterDropdown');

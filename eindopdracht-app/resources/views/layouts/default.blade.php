@@ -63,7 +63,7 @@
 <body>
     <img src="{{ asset('fotos/EPJfoto.png') }}" alt="description of myimage" class="background-image">
 
-    
+    <body>
     <main class="main">
         @yield('content')
         @include('includes.header')

@@ -57,4 +57,11 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+    /**
+     make a function that return the email of the logged in user for use in frontend user interface
+     */
+    public function getEmail(Request $request): string
+    {
+        return $request->user()->email;
+    }
 }

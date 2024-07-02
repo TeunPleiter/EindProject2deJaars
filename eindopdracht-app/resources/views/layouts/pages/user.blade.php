@@ -1,4 +1,6 @@
 @extends('layouts.default')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,46 +8,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Page</title>
     <style>
-        body, html {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
         }
-        
+
         .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            z-index: 1;
-        }
-        
-        .user-info {
-            background-color: #fff;
+            max-width: 800px;
+            margin: 50px auto;
             padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-info {
             text-align: center;
         }
-        
+
+        .user-info h1 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
         .email-section {
             margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
-        
-        button {
+
+        .email-section h2 {
+            margin-bottom: 10px;
+            color: #555555;
+        }
+
+        .email-section p {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333333;
+        }
+
+        .email-section button {
             padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
+            background-color: #009879;
+            color: #ffffff;
             border: none;
             border-radius: 5px;
+            font-size: 1em;
             cursor: pointer;
-            transition: background-color 0.3s ease;
         }
-        
-        button:hover {
-            background-color: #555;
+
+        .email-section button:hover {
+            background-color: #007a65;
+        }
+
+        .settings-section button {
+            padding: 10px 20px;
+            background-color: #444444;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .settings-section button:hover {
+            background-color: #333333;
         }
     </style>
 </head>
@@ -63,109 +95,60 @@
             </div>
         </div>
     </div>
-    <script>
-        // Set the access token in localStorage
-        localStorage.setItem('accessToken', 'MEV0bCVmNk9IeyGHvBTaefhaYA0fytpaswszHKhJ');
 
-        // Function to fetch and display logged-in user's email
+    <script>
         async function displayUserEmail() {
             try {
-                const token = localStorage.getItem('accessToken');
-                if (!token) {
-                    throw new Error('No access token found');
-                }
-
-                const response = await fetch('/profileController/getUserInfo', {
-                    method: 'GET',
+                const response = await fetch('/profile/email', {
                     headers: {
-                        'Authorization': 'Bearer ' + token,
-                        'Content-Type': 'application/json'
+                        'Accept': 'application/json',
+                        'Authorization': 'Bearer ' + localStorage.getItem('accessToken')
                     }
                 });
 
-                const contentType = response.headers.get('content-type');
-
                 if (!response.ok) {
-                    if (contentType && contentType.includes('application/json')) {
-                        const errorDetails = await response.json();
-                        throw new Error(`Failed to fetch user information: ${response.statusText} - ${errorDetails.message}`);
-                    } else {
-                        const errorText = await response.text();
-                        throw new Error(`Failed to fetch user information: ${response.statusText} - ${errorText}`);
-                    }
+                    throw new Error('Failed to fetch user information: ' + response.status + ' - ' + response.statusText);
                 }
 
-                if (contentType && contentType.includes('application/json')) {
-                    const userData = await response.json();
-                    document.getElementById('email').textContent = userData.email;
-                } else {
-                    throw new Error('Unexpected response format');
-                }
+                const userData = await response.json();
+                document.getElementById('email').textContent = userData.email;
             } catch (error) {
                 console.error('Error fetching user information:', error);
-                alert(`Failed to fetch user information: ${error.message}`);
+                alert('Error fetching user information: ' + error.message);
             }
         }
 
-        // Function to change the user's email
-        async function changeEmail() {
-            let newEmail = prompt("Enter your new email address:");
-            if (newEmail) {
-                try {
-                    const token = localStorage.getItem('accessToken');
-                    if (!token) {
-                        throw new Error('No access token found');
-                    }
+        document.addEventListener('DOMContentLoaded', function() {
+            displayUserEmail();
 
-                    const response = await fetch('/profileController/changeEmail', {
-                        method: 'POST',
-                        headers: {
-                            'Authorization': 'Bearer ' + token,
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ email: newEmail })
-                    });
-
-                    const contentType = response.headers.get('content-type');
-
-                    if (!response.ok) {
-                        if (contentType && contentType.includes('application/json')) {
-                            const errorDetails = await response.json();
-                            throw new Error(`Failed to update email: ${response.statusText} - ${errorDetails.message}`);
-                        } else {
-                            const errorText = await response.text();
-                            throw new Error(`Failed to update email: ${response.statusText} - ${errorText}`);
-                        }
-                    }
-
-                    if (contentType && contentType.includes('application/json')) {
-                        const userData = await response.json();
-                        document.getElementById('email').textContent = userData.email;
-                        alert("Email updated successfully.");
-                    } else {
-                        throw new Error('Unexpected response format');
-                    }
-                } catch (error) {
-                    console.error('Error updating email:', error);
-                    alert(`Failed to update email: ${error.message}`);
+            document.getElementById('changeEmailBtn').addEventListener('click', function() {
+                // Implement changeEmail functionality here
+                let newEmail = prompt("Enter your new email address:");
+                if (newEmail) {
+                    // Example code to update email
+                    // const response = await fetch('/profile/updateEmail', {
+                    //     method: 'POST',
+                    //     headers: {
+                    //         'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
+                    //         'Content-Type': 'application/json'
+                    //     },
+                    //     body: JSON.stringify({ email: newEmail })
+                    // });
+                    // Handle response and update UI
                 }
-            }
-        }
+            });
 
-        // Event listener for Change Email button
-        document.getElementById('changeEmailBtn').addEventListener('click', changeEmail);
-
-        // Event listener for Settings button
-        document.getElementById('settingsBtn').addEventListener('click', function() {
-            alert("Navigate to settings page");
-            // Example: window.location.href = 'settings.html';
+            document.getElementById('settingsBtn').addEventListener('click', function() {
+                alert("Navigate to settings page");
+                // Example: window.location.href = 'settings.html';
+            });
         });
-
-        // Call function to display email on page load
-        displayUserEmail();
     </script>
+
 </body>
 </html>
+@endsection
+
 
 
 @php

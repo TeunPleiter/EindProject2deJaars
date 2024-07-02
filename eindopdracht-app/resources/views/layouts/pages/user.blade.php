@@ -1,3 +1,4 @@
+@extends('layouts.default')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,63 +62,107 @@
             </div>
         </div>
     </div>
+    <script>
+        // Set the access token in localStorage
+        localStorage.setItem('accessToken', 'MEV0bCVmNk9IeyGHvBTaefhaYA0fytpaswszHKhJ');
 
-        <script>
-            localStorage.setItem('accessToken', 'MEV0bCVmNk9IeyGHvBTaefhaYA0fytpaswszHKhJ')
-            // Function to fetch and display logged-in user's email
-            async function displayUserEmail() {
+        // Function to fetch and display logged-in user's email
+        async function displayUserEmail() {
+            try {
+                const token = localStorage.getItem('accessToken');
+                if (!token) {
+                    throw new Error('No access token found');
+                }
+
+                const response = await fetch('/profileController/getUserInfo', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': 'Bearer ' + token,
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                const contentType = response.headers.get('content-type');
+
+                if (!response.ok) {
+                    if (contentType && contentType.includes('application/json')) {
+                        const errorDetails = await response.json();
+                        throw new Error(`Failed to fetch user information: ${response.statusText} - ${errorDetails.message}`);
+                    } else {
+                        const errorText = await response.text();
+                        throw new Error(`Failed to fetch user information: ${response.statusText} - ${errorText}`);
+                    }
+                }
+
+                if (contentType && contentType.includes('application/json')) {
+                    const userData = await response.json();
+                    document.getElementById('email').textContent = userData.email;
+                } else {
+                    throw new Error('Unexpected response format');
+                }
+            } catch (error) {
+                console.error('Error fetching user information:', error);
+                alert(`Failed to fetch user information: ${error.message}`);
+            }
+        }
+
+        // Function to change the user's email
+        async function changeEmail() {
+            let newEmail = prompt("Enter your new email address:");
+            if (newEmail) {
                 try {
                     const token = localStorage.getItem('accessToken');
                     if (!token) {
                         throw new Error('No access token found');
-                    }   
+                    }
 
-                    const response = await fetch('/api/userinfo', {
-                        method: 'GET',
+                    const response = await fetch('/profileController/changeEmail', {
+                        method: 'POST',
                         headers: {
                             'Authorization': 'Bearer ' + token,
                             'Content-Type': 'application/json'
-                        }
+                        },
+                        body: JSON.stringify({ email: newEmail })
                     });
 
-                    console.log();
+                    const contentType = response.headers.get('content-type');
 
                     if (!response.ok) {
-                        const errorDetails = await response.json();
-                        throw new Error(`Failed to fetch user information: ${response.statusText} - ${errorDetails.message}`);
+                        if (contentType && contentType.includes('application/json')) {
+                            const errorDetails = await response.json();
+                            throw new Error(`Failed to update email: ${response.statusText} - ${errorDetails.message}`);
+                        } else {
+                            const errorText = await response.text();
+                            throw new Error(`Failed to update email: ${response.statusText} - ${errorText}`);
+                        }
                     }
 
-                    const userData = await response.json();
-                    document.getElementById('email').textContent = userData.email;
+                    if (contentType && contentType.includes('application/json')) {
+                        const userData = await response.json();
+                        document.getElementById('email').textContent = userData.email;
+                        alert("Email updated successfully.");
+                    } else {
+                        throw new Error('Unexpected response format');
+                    }
                 } catch (error) {
-                    console.error('Error fetching user information:', error);
-                    alert(`Failed to fetch user information: ${error.message}`);
+                    console.error('Error updating email:', error);
+                    alert(`Failed to update email: ${error.message}`);
                 }
             }
-            
-            // Call function to display email on page load
-            displayUserEmail();
-            
-            // Function to simulate changing email (example only)
-            function changeEmail() {
-                let newEmail = prompt("Enter your new email address:");
-                if (newEmail) {
-                    // Replace with actual code to update user's email on the server
-                    // Example: make a POST request to update the email
-                    alert("Feature not implemented in this example.");
-                }
-            }
-            
-            // Event listener for Change Email button
-            document.getElementById('changeEmailBtn').addEventListener('click', changeEmail);
-            
-            // Event listener for Settings button
-            document.getElementById('settingsBtn').addEventListener('click', function() {
-                // Replace with actual navigation logic to settings page
-                alert("Navigate to settings page");
-                // Example: window.location.href = 'settings.html';
-            });
-        </script>
+        }
+
+        // Event listener for Change Email button
+        document.getElementById('changeEmailBtn').addEventListener('click', changeEmail);
+
+        // Event listener for Settings button
+        document.getElementById('settingsBtn').addEventListener('click', function() {
+            alert("Navigate to settings page");
+            // Example: window.location.href = 'settings.html';
+        });
+
+        // Call function to display email on page load
+        displayUserEmail();
+    </script>
 </body>
 </html>
 

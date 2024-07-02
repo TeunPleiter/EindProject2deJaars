@@ -73,6 +73,8 @@ Route::middleware('auth')->group(function () {
     })->name('search');
 });
 
+// route for the getEmail function
+Route::get('/getEmail', [ProfileController::class, 'getEmail'])->name('getEmail');
 
 
 // Include default Laravel authentication routes

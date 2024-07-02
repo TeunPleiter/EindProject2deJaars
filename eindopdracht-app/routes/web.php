@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\api\MovieController;
 use App\Models\Movie;
 // Default route (root URL)
 
@@ -77,3 +78,6 @@ Route::get('/getEmail', [ProfileController::class, 'getEmail'])->name('getEmail'
 
 // Include default Laravel authentication routes
 require __DIR__ . '/auth.php';
+
+//route for getPoster function from MovieController
+Route::get('/getPoster/{id}', [MovieController::class, 'getPoster'])->name('getPoster');

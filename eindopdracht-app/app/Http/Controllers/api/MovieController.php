@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Movie;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Http;
 
 class MovieController extends Controller
 {
@@ -63,5 +64,13 @@ class MovieController extends Controller
         return response()->json(null, Response::HTTP_NO_CONTENT);
     }
 
+    //function to extract poster from omdb api using title from the database in movie table title column
+    public function getPoster($id)
+    {
+        $movie = Movie::findOrFail($id);
+        $title = $movie->title;
+        $response = Http::get('http://www.omdbapi.com/?apikey=4a3b711b&t=' . $title);
+        $poster = $response->json()['Poster'];
+        return redirect($poster);
+        }
 }
-

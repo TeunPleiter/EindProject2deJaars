@@ -12549,3 +12549,337 @@
 #61 C:\\xampp\\htdocs\\frontend\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\xampp\\\\htdocs...')
 #62 {main}
 "} 
+[2024-07-02 10:53:38] local.ERROR: Command "make:service" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:service\" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view at C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\symfony\\console\\Application.php:702)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\symfony\\console\\Application.php(258): Symfony\\Component\\Console\\Application->find('make:service')
+#1 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(196): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1198): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#5 {main}
+"} 
+[2024-07-02 11:09:49] local.ERROR: Client error: `GET https://api.themoviedb.org/3/movie/1` resulted in a `401 Unauthorized` response:
+{"status_code":7,"status_message":"Invalid API key: You must be granted a valid key.","success":false}
+
+ {"exception":"[object] (GuzzleHttp\\Exception\\ClientException(code: 401): Client error: `GET https://api.themoviedb.org/3/movie/1` resulted in a `401 Unauthorized` response:
+{\"status_code\":7,\"status_message\":\"Invalid API key: You must be granted a valid key.\",\"success\":false}
+
+ at C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php:113)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(72): GuzzleHttp\\Exception\\RequestException::create(Object(GuzzleHttp\\Psr7\\Request), Object(GuzzleHttp\\Psr7\\Response), NULL, Array, NULL)
+#1 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(209): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Response))
+#2 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(158): GuzzleHttp\\Promise\\Promise::callHandler(1, Object(GuzzleHttp\\Psr7\\Response), NULL)
+#3 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\TaskQueue.php(52): GuzzleHttp\\Promise\\Promise::GuzzleHttp\\Promise\\{closure}()
+#4 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(251): GuzzleHttp\\Promise\\TaskQueue->run(true)
+#5 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(227): GuzzleHttp\\Promise\\Promise->invokeWaitFn()
+#6 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(272): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#7 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(229): GuzzleHttp\\Promise\\Promise->invokeWaitList()
+#8 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(69): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#9 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(189): GuzzleHttp\\Promise\\Promise->wait()
+#10 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\guzzle\\src\\ClientTrait.php(44): GuzzleHttp\\Client->request('GET', 'movie/1', Array)
+#11 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\app\\Providers\\TMDBService.php(20): GuzzleHttp\\Client->get('movie/1', Array)
+#12 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\app\\Http\\Controllers\\api\\MovieController.php(76): App\\Services\\TMDBService->getMoviePoster('1')
+#13 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): App\\Http\\Controllers\\Api\\MovieController->showMoviePoster('1')
+#14 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(260): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Api\\MovieController), 'showMoviePoster')
+#15 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(206): Illuminate\\Routing\\Route->runController()
+#16 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#17 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#26 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#33 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#34 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#35 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#36 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#37 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#54 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#55 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1183): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#56 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#57 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\xampp\\\\htdocs...')
+#58 {main}
+"} 
+[2024-07-02 11:17:26] local.ERROR: Client error: `GET https://api.themoviedb.org/3/movie/1` resulted in a `401 Unauthorized` response:
+{"status_code":7,"status_message":"Invalid API key: You must be granted a valid key.","success":false}
+
+ {"exception":"[object] (GuzzleHttp\\Exception\\ClientException(code: 401): Client error: `GET https://api.themoviedb.org/3/movie/1` resulted in a `401 Unauthorized` response:
+{\"status_code\":7,\"status_message\":\"Invalid API key: You must be granted a valid key.\",\"success\":false}
+
+ at C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php:113)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(72): GuzzleHttp\\Exception\\RequestException::create(Object(GuzzleHttp\\Psr7\\Request), Object(GuzzleHttp\\Psr7\\Response), NULL, Array, NULL)
+#1 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(209): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Response))
+#2 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(158): GuzzleHttp\\Promise\\Promise::callHandler(1, Object(GuzzleHttp\\Psr7\\Response), NULL)
+#3 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\TaskQueue.php(52): GuzzleHttp\\Promise\\Promise::GuzzleHttp\\Promise\\{closure}()
+#4 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(251): GuzzleHttp\\Promise\\TaskQueue->run(true)
+#5 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(227): GuzzleHttp\\Promise\\Promise->invokeWaitFn()
+#6 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(272): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#7 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(229): GuzzleHttp\\Promise\\Promise->invokeWaitList()
+#8 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(69): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#9 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(189): GuzzleHttp\\Promise\\Promise->wait()
+#10 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\guzzle\\src\\ClientTrait.php(44): GuzzleHttp\\Client->request('GET', 'movie/1', Array)
+#11 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\app\\Providers\\TMDBService.php(20): GuzzleHttp\\Client->get('movie/1', Array)
+#12 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\app\\Http\\Controllers\\api\\MovieController.php(76): App\\Services\\TMDBService->getMoviePoster('1')
+#13 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): App\\Http\\Controllers\\Api\\MovieController->showMoviePoster('1')
+#14 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(260): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Api\\MovieController), 'showMoviePoster')
+#15 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(206): Illuminate\\Routing\\Route->runController()
+#16 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#17 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#26 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#33 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#34 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#35 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#36 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#37 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#54 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#55 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1183): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#56 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#57 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\xampp\\\\htdocs...')
+#58 {main}
+"} 
+[2024-07-02 11:18:19] local.ERROR: Client error: `GET https://api.themoviedb.org/3/movie/1?api_key=631be3ba943a04cc106cd444747c16f0` resulted in a `404 Not Found` response:
+{"success":false,"status_code":34,"status_message":"The resource you requested could not be found."}
+ {"exception":"[object] (GuzzleHttp\\Exception\\ClientException(code: 404): Client error: `GET https://api.themoviedb.org/3/movie/1?api_key=631be3ba943a04cc106cd444747c16f0` resulted in a `404 Not Found` response:
+{\"success\":false,\"status_code\":34,\"status_message\":\"The resource you requested could not be found.\"}
+ at C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php:113)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(72): GuzzleHttp\\Exception\\RequestException::create(Object(GuzzleHttp\\Psr7\\Request), Object(GuzzleHttp\\Psr7\\Response), NULL, Array, NULL)
+#1 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(209): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Response))
+#2 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(158): GuzzleHttp\\Promise\\Promise::callHandler(1, Object(GuzzleHttp\\Psr7\\Response), NULL)
+#3 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\TaskQueue.php(52): GuzzleHttp\\Promise\\Promise::GuzzleHttp\\Promise\\{closure}()
+#4 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(251): GuzzleHttp\\Promise\\TaskQueue->run(true)
+#5 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(227): GuzzleHttp\\Promise\\Promise->invokeWaitFn()
+#6 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(272): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#7 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(229): GuzzleHttp\\Promise\\Promise->invokeWaitList()
+#8 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\promises\\src\\Promise.php(69): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#9 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(189): GuzzleHttp\\Promise\\Promise->wait()
+#10 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\guzzlehttp\\guzzle\\src\\ClientTrait.php(44): GuzzleHttp\\Client->request('GET', 'movie/1', Array)
+#11 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\app\\Providers\\TMDBService.php(20): GuzzleHttp\\Client->get('movie/1', Array)
+#12 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\app\\Http\\Controllers\\api\\MovieController.php(76): App\\Services\\TMDBService->getMoviePoster('1')
+#13 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): App\\Http\\Controllers\\Api\\MovieController->showMoviePoster('1')
+#14 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(260): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Api\\MovieController), 'showMoviePoster')
+#15 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(206): Illuminate\\Routing\\Route->runController()
+#16 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#17 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#26 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#33 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#34 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#35 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#36 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#37 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#54 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#55 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1183): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#56 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#57 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\xampp\\\\htdocs...')
+#58 {main}
+"} 
+[2024-07-02 12:05:35] local.ERROR: Class "App\Providers\OMDBServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"App\\Providers\\OMDBServiceProvider\" not found at C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\app\\Http\\Controllers\\api\\MovieController.php:70)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): App\\Http\\Controllers\\Api\\MovieController->getPoster('1')
+#1 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(260): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Api\\MovieController), 'getPoster')
+#2 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(206): Illuminate\\Routing\\Route->runController()
+#3 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#4 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#5 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#7 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#8 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#13 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#21 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#22 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#23 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#24 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#41 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#42 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1183): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#43 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#44 C:\\xampp\\htdocs\\programmeren\\laravel\\crud\\conner-app\\EindProject2deJaars\\eindopdracht-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\xampp\\\\htdocs...')
+#45 {main}
+"} 

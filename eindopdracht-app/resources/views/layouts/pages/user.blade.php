@@ -62,54 +62,65 @@
         </div>
     </div>
 
-    <script>
-        // Function to fetch and display logged-in user's email
-        async function displayUserEmail() {
-            try {
-                const response = await fetch('/api/userinfo', {
-                    method: 'GET',
-                    headers: {
-                        'Authorization': 'Bearer ' + sessionStorage.getItem('accessToken') // Example: Bearer token
+        <script>
+            localStorage.setItem('accessToken', 'MEV0bCVmNk9IeyGHvBTaefhaYA0fytpaswszHKhJ')
+            // Function to fetch and display logged-in user's email
+            async function displayUserEmail() {
+                try {
+                    const token = localStorage.getItem('accessToken');
+                    if (!token) {
+                        throw new Error('No access token found');
+                    }   
+
+                    const response = await fetch('/api/userinfo', {
+                        method: 'GET',
+                        headers: {
+                            'Authorization': 'Bearer ' + token,
+                            'Content-Type': 'application/json'
+                        }
+                    });
+
+                    console.log();
+
+                    if (!response.ok) {
+                        const errorDetails = await response.json();
+                        throw new Error(`Failed to fetch user information: ${response.statusText} - ${errorDetails.message}`);
                     }
-                });
 
-                if (!response.ok) {
-                    throw new Error('Failed to fetch user information');
+                    const userData = await response.json();
+                    document.getElementById('email').textContent = userData.email;
+                } catch (error) {
+                    console.error('Error fetching user information:', error);
+                    alert(`Failed to fetch user information: ${error.message}`);
                 }
-
-                const userData = await response.json();
-                document.getElementById('email').textContent = userData.email;
-            } catch (error) {
-                console.error('Error fetching user information:', error);
-                // Handle error (e.g., show error message to user)
             }
-        }
-        
-        // Call function to display email on page load
-        displayUserEmail();
-        
-        // Function to simulate changing email (example only)
-        function changeEmail() {
-            let newEmail = prompt("Enter your new email address:");
-            if (newEmail) {
-                // Replace with actual code to update user's email on the server
-                // Example: make a POST request to update the email
-                alert("Feature not implemented in this example.");
+            
+            // Call function to display email on page load
+            displayUserEmail();
+            
+            // Function to simulate changing email (example only)
+            function changeEmail() {
+                let newEmail = prompt("Enter your new email address:");
+                if (newEmail) {
+                    // Replace with actual code to update user's email on the server
+                    // Example: make a POST request to update the email
+                    alert("Feature not implemented in this example.");
+                }
             }
-        }
-        
-        // Event listener for Change Email button
-        document.getElementById('changeEmailBtn').addEventListener('click', changeEmail);
-        
-        // Event listener for Settings button
-        document.getElementById('settingsBtn').addEventListener('click', function() {
-            // Replace with actual navigation logic to settings page
-            alert("Navigate to settings page");
-            // Example: window.location.href = 'settings.html';
-        });
-    </script>
+            
+            // Event listener for Change Email button
+            document.getElementById('changeEmailBtn').addEventListener('click', changeEmail);
+            
+            // Event listener for Settings button
+            document.getElementById('settingsBtn').addEventListener('click', function() {
+                // Replace with actual navigation logic to settings page
+                alert("Navigate to settings page");
+                // Example: window.location.href = 'settings.html';
+            });
+        </script>
 </body>
 </html>
+
 
 @php
     $hideSidebar = true;

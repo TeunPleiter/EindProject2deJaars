@@ -74,3 +74,7 @@
     </form>
 </div>
 @stop
+
+@php
+    $hideSidebar = true;
+@endphp

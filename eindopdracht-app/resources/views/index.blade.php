@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     @include('includes.head')
     <meta charset="UTF-8">

@@ -1,8 +1,9 @@
 @extends('layouts.default')
 
 @section('content')
-<form class="search" action="">
-  <input type="search" placeholder="Search here..." required>
+
+<form class="search" action="{{ route('search.perform') }}" method="GET">
+  <input type="search" name="title" placeholder="Search here..." required>
   <button type="submit">Search</button>
 </form>
 @endsection

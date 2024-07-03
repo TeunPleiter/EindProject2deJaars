@@ -83,6 +83,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/search', function () {
         return view('layouts.pages.search'); // Adjust the view path according to your structure
     })->name('search');
+    
+    Route::get('/search/results', [MovieController::class, 'search'])->name('search.perform');
 });
 
 // Include default Laravel authentication routes

@@ -33,8 +33,3 @@ Route::put('/movies/update/{id}', [MovieController::class, 'update'])->name('mov
 Route::delete('/movies/delete/{id}', [MovieController::class, 'destroy'])->name('movies.destroy');
 
 Route::post('/movies/toggle', [FavoriteController::class, 'addfavorite'])->name('movies.addfavorite');
-
-/**
- function for search bar
- */
-Route::get('/movies/search/{title}', [MovieController::class, 'search'])->name('movies.search');

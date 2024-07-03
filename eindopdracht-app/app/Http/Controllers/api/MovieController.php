@@ -75,9 +75,10 @@ class MovieController extends Controller
     }
 
     //search bar function
-    public function search($title)
+    public function search(Request $request)
     {
+        $title = $request->input('title');
         $movies = Movie::where('title', 'like', '%' . $title . '%')->get();
-        return response()->json($movies);
+        return view('search.results', ['movies' => $movies]);
     }
 }

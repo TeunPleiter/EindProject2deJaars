@@ -61,8 +61,13 @@ class ProfileController extends Controller
     /**
      make a function that return the email of the logged in user for use in frontend user interface
      */
-    public function getEmail(Request $request): string
+    public function getEmail(Request $request)
     {
-        return $request->user()->email;
+        return response()->json(['email' => $request->user()->email]);
     }
+
+   
 }
+
+
+  

@@ -72,5 +72,12 @@ class MovieController extends Controller
         $response = Http::get('http://www.omdbapi.com/?apikey=4a3b711b&t=' . $title);
         $poster = $response->json()['Poster'];
         return redirect($poster);
-        }
+    }
+
+    //search bar function
+    public function search($title)
+    {
+        $movies = Movie::where('title', 'like', '%' . $title . '%')->get();
+        return response()->json($movies);
+    }
 }

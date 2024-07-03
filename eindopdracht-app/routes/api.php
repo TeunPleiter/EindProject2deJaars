@@ -34,3 +34,7 @@ Route::delete('/movies/delete/{id}', [MovieController::class, 'destroy'])->name(
 
 Route::post('/movies/toggle', [FavoriteController::class, 'addfavorite'])->name('movies.addfavorite');
 
+/**
+ function for search bar
+ */
+Route::get('/movies/search/{title}', [MovieController::class, 'search'])->name('movies.search');

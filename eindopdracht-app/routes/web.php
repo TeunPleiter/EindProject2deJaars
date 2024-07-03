@@ -20,27 +20,6 @@ Route::post('/logout', function () {
     return redirect('/movies');
 })->name('logout');
 
-// Route for home page
-Route::get('/movies', function () {
-    $movies = Movie::all();
-    return view('layouts.pages.home', ['movies' => $movies]);
-});
-
-// Route for contact page
-Route::get('/contact', function () {
-    return view('layouts.pages.contact');
-});
-
-// Default welcome route
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
-// Dashboard route requiring authentication and email verification
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 // Profile routes protected by auth middleware
 Route::middleware('auth')->group(function () {
     Route::get('/addfavorite/{id}', [FavoriteController::class, 'addfavorite'])->name('addfavorite');
@@ -74,6 +53,21 @@ Route::middleware('auth')->group(function () {
         return view('welcome');
     });
 
+    // Route for home page
+    Route::get('/movies', function () {
+        $movies = Movie::all();
+        return view('layouts.pages.home', ['movies' => $movies]);
+    });
+
+    // Route for contact page
+    Route::get('/contact', function () {
+        return view('layouts.pages.contact');
+    });
+
+    // Dashboard route requiring authentication and email verification
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware(['auth', 'verified'])->name('dashboard');
 });
 
 // New routes requiring authentication

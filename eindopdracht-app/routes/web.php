@@ -24,7 +24,7 @@ Route::post('/logout', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/addfavorite/{id}', [FavoriteController::class, 'addfavorite'])->name('addfavorite');
     Route::get('/removefavorite/{id}', [FavoriteController::class, 'removefavorite'])->name('removefavorite');
-    Route::get('/favorites', [FavoriteController::class, 'showfavorites'])->name('showfavorites');
+    Route::get('/favorite', [FavoriteController::class, 'showfavorites'])->name('showfavorites');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

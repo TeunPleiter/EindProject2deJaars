@@ -118,13 +118,7 @@
         <div class="sidebar" id="sidebar">
             <input type="text" class="search-input" placeholder="Search...">
             <br>
-            <button class="filter-btn" onclick="toggleDropdown()">Filter</button>
-            <div class="dropdown-menu" id="filterDropdown">
-                <button class="dropdown-item">high-low rated</button>
-                <button class="dropdown-item">low-high rated</button>
-                <button class="dropdown-item">a-z</button>
-                <button class="dropdown-item">recently added</button>
-            </div>
+            
     <script>
         function toggleDropdown() {
             var dropdown = document.getElementById('filterDropdown');

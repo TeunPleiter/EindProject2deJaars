@@ -92,3 +92,5 @@ require __DIR__ . '/auth.php';
 
 //route for getPoster function from MovieController
 Route::get('/getPoster/{id}', [MovieController::class, 'getPoster'])->name('getPoster');
+
+

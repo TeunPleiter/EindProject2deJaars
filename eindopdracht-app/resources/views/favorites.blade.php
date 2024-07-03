@@ -5,10 +5,10 @@
     @foreach ($favorites as $favorite)
     <div class="movie-item">
         <li>{{ $favorite->movie->title }}</li>
+        <img src="{{ route('getPoster', $favorite->movie->id) }}" alt="Movie Poster" style="max-width: 100%; height: auto;">
         <a href="{{ route('removefavorite', $favorite->movie->id) }}" style="text-decoration: none;">
             <button>REMOVE FAVORITE</button>
         </a>
-        <img src="{{ route('getPoster', $favorite->movie->id) }}" alt="Movie Poster" style="max-width: 100%; height: auto;">
     </div>
     @endforeach
 </div>

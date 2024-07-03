@@ -118,12 +118,6 @@
                         <button type="submit">Logout</button>
                     </form>
                 </li>
-                <li>
-                    <button class="footer-button">
-                            <i class="fas fa-search"></i>
-                            Search
-                    </button>
-                </li>
             </ul>
         </div>
     </div>

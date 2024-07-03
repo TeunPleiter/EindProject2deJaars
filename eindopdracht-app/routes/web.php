@@ -52,6 +52,7 @@ Route::middleware('auth')->group(function () {
 
     // Route for the getEmail function
     Route::get('/profile/email', [ProfileController::class, 'getEmail'])->name('profile.email');
+    Route::post('/profile/updateEmail', [ProfileController::class, 'changeEmail'])->name('profile.changeEmail');
 
     Route::get('/', function () {
         return view('index');
@@ -92,3 +93,5 @@ Route::middleware('auth')->group(function () {
 
 // Include default Laravel authentication routes
 require __DIR__ . '/auth.php';
+
+

@@ -57,7 +57,7 @@
 @else
     <div class="movie-container">
         @foreach($movies as $movie)
-            <div class="movie-item">
+            <div class="movie-item">    
                 <h2>{{ $movie['title'] }}</h2>
                 @if($movie['poster'])
                     <img src="{{ $movie['poster'] }}" alt="{{ $movie['title'] }}">

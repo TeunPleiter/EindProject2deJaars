@@ -66,7 +66,18 @@ class ProfileController extends Controller
         return response()->json(['email' => $request->user()->email]);
     }
 
-   
+   // function to change user mail
+    public function changeEmail(Request $request)
+    {
+        $request->validate([
+            'email' => ['required', 'email', 'unique:users'],
+        ]);
+
+        Auth::user()->update(['email' => $request->email]);
+
+        return redirect()->route('profile.edit');
+    }
+    
 }
 
 

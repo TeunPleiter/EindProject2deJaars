@@ -70,7 +70,7 @@
         .dropdown-menu {
             display: none; /* Initially hidden */
             position: absolute; /* Position dropdown absolutely */
-            top: calc(100% + 10px); /* Position dropdown below filter button */
+            top: calc(65% ); /* Position dropdown below filter button */
             left: 0;
             width: 100%;
             max-height: 200px; /* Set maximum height for dropdown menu */

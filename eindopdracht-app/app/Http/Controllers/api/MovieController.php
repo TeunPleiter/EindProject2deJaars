@@ -64,21 +64,35 @@ class MovieController extends Controller
         return response()->json(null, Response::HTTP_NO_CONTENT);
     }
 
-    //function to extract poster from omdb api using title from the database in movie table title column
+    // Function to extract poster from OMDb API using title from the database in movie table title column
     public function getPoster($id)
     {
         $movie = Movie::findOrFail($id);
         $title = $movie->title;
-        $response = Http::get('http://www.omdbapi.com/?apikey=4a3b711b&t=' . $title);
+        $response = Http::get('http://www.omdbapi.com/?apikey=4a3b711b&t=' . urlencode($title));
         $poster = $response->json()['Poster'];
         return redirect($poster);
     }
 
-    //search bar function
+    // Search bar function
     public function search(Request $request)
     {
         $title = $request->input('title');
+        
+        // Fetch movies from database
         $movies = Movie::where('title', 'like', '%' . $title . '%')->get();
-        return view('search.results', ['movies' => $movies]);
+
+        // Fetch additional details from OMDb API for each movie
+        $movieDetails = $movies->map(function($movie) {
+            $response = Http::get('http://www.omdbapi.com/?apikey=4a3b711b&t=' . urlencode($movie->title));
+            $data = $response->json();
+            return [
+                'title' => $movie->title,
+                'poster' => $data['Poster'] !== 'N/A' ? $data['Poster'] : null,
+                'description' => $data['Plot'],
+            ];
+        });
+
+        return view('search.results', ['movies' => $movieDetails]);
     }
 }

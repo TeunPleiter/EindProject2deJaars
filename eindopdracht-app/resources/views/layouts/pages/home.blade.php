@@ -35,6 +35,7 @@ body {
     align-items: center; /* Center items vertically */
     background-color: #f0f0f0; /* Optional: background color for the page */
     min-height: 100vh; /* Ensure body at least takes full viewport height */
+    overflow: scroll;
 }
 
 .movie-container {

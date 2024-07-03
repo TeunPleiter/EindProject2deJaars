@@ -82,7 +82,7 @@
             </a>
         </button>
         <button class="footer-button">
-            <a href="/favorites">
+            <a href="/favorite">
                 <i class="fas fa-star"></i>
                 Favorite
             </a>

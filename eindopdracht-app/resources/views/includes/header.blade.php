@@ -31,8 +31,8 @@
 
         .navbar-inner {
             display: flex;
+            justify-content: space-between; /* Distribute items evenly */
             align-items: center; /* Align items vertically */
-            justify-content: center;
         }
 
         #logo {
@@ -40,8 +40,6 @@
             color: white; 
             text-decoration: none;
             font-weight: bold;
-            position: absolute;
-            right: 20px; 
         }
 
         .nav {
@@ -49,6 +47,10 @@
             display: flex;
             gap: 30px; /* Adjusted space between buttons */
             align-items: center; /* Align items vertically within the ul */
+            margin: 0;
+            padding: 0;
+            flex-grow: 1; /* Take remaining space */
+            justify-content: center; /* Center items horizontally */
         }
 
         .nav li {
@@ -79,6 +81,29 @@
 
         .logout-form {
             display: inline; /* Ensure form and button appear inline */
+        }
+
+        .footer-button {
+            text-decoration: none;
+            color: white;
+            font-size: 0.9em;
+            transition: color 0.3s;
+            border: 1px solid white;
+            background: none;
+            border-radius: 20px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font: inherit;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-button i {
+            margin-right: 5px;
+        }
+
+        .footer-button:hover {
+            color: #A9A9A9;
         }
     </style>
 </head>

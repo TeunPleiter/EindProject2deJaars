@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar Example</title>
+    <title>Movies</title>
     <style>
         body, html {
             margin: 0;
@@ -120,11 +120,22 @@
             <br>
             <button class="filter-btn" onclick="toggleDropdown()">Filter</button>
             <div class="dropdown-menu" id="filterDropdown">
-                <button class="dropdown-item">high-low rated</button>
-                <button class="dropdown-item">low-high rated</button>
-                <button class="dropdown-item">a-z</button>
-                <button class="dropdown-item">recently added</button>
+                <button class="dropdown-item" onclick="filterMovies('high-low')">High to Low Rated</button>
+                <button class="dropdown-item" onclick="filterMovies('low-high')">Low to High Rated</button>
+                <button class="dropdown-item" onclick="filterMovies('a-z')">A-Z</button>
+                <button class="dropdown-item" onclick="filterMovies('recently-added')">Recently Added</button>
             </div>
+        </div>
+        <div class="main-content">
+            <h1>Movies List</h1>
+            <ul id="movie-list">
+                @foreach ($movies as $movie)
+                    <li>{{ $movie->title }} - Rating: {{ $movie->rating }}</li>
+                @endforeach
+            </ul>
+        </div>
+    </div>
+
     <script>
         function toggleDropdown() {
             var dropdown = document.getElementById('filterDropdown');
@@ -139,17 +150,26 @@
             }
         }
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.filter-btn') && !event.target.closest('.dropdown-menu')) {
-                var dropdown = document.getElementById('filterDropdown');
-                var sidebar = document.getElementById('sidebar');
+        function filterMovies(criteria) {
+            var form = document.createElement('form');
+            form.setAttribute('method', 'post');
+            form.setAttribute('action', '/movies/filter');
+            form.style.display = 'hidden';
+            document.body.appendChild(form);
 
-                if (dropdown.style.display === 'block') {
-                    dropdown.style.display = 'none';
-                    sidebar.classList.remove('expanded');
-                }
-            }
+            var input = document.createElement('input');
+            input.setAttribute('type', 'hidden');
+            input.setAttribute('name', '_token');
+            input.setAttribute('value', '{{ csrf_token() }}');
+            form.appendChild(input);
+
+            var inputCriteria = document.createElement('input');
+            inputCriteria.setAttribute('type', 'hidden');
+            inputCriteria.setAttribute('name', 'criteria');
+            inputCriteria.setAttribute('value', criteria);
+            form.appendChild(inputCriteria);
+
+            form.submit();
         }
     </script>
 </body>

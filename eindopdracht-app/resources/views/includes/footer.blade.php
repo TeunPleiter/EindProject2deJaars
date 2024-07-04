@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-ETPwiIcfkFm2GGP5otE93f5RjD0eVKf8UMIeGkS/+G7no3CblzR7ep3zF+6Z7MZgFpKfFu/BcANMkWs8sJLxOQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
@@ -18,26 +17,26 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Adjust vertical alignment */
+            justify-content: space-between; 
         }
 
         .main-content {
-            flex: 1; /* Take remaining vertical space */
-            overflow-y: auto; /* Enable scrolling for main content */
-            padding: 20px; /* Add padding as needed */
+            flex: 1; 
+            overflow-y: auto; 
+            padding: 20px; 
         }
 
         .footer {
-            background-color: #333; /* Dark background color */
-            padding: 10px 0; /* Adjust padding as needed */
-            width: 100%; /* Full width */
+            background-color: #333; 
+            padding: 10px 0; 
+            width: 100%; 
             display: flex;
-            justify-content: space-around; /* Space out buttons evenly */
+            justify-content: space-around; 
             align-items: center;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
-            position: fixed; /* Fix the footer to the bottom */
-            bottom: 0; /* Position it at the bottom */
-            left: 0; /* Ensure it spans the full width from left */
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
+            position: fixed; 
+            bottom: 0; 
+            left: 0; 
         }
 
         .footer-button {
@@ -48,16 +47,16 @@
             cursor: pointer;
             display: flex;
             align-items: center;
-            padding: 5px; /* Add padding for clickable area */
-            text-decoration: none; /* Remove underline from <a> */
+            padding: 5px; 
+            text-decoration: none; 
         }
 
         .footer-button i {
-            margin-right: 5px; /* Space between icon and text */
+            margin-right: 5px; 
         }
 
         .footer-button:hover {
-            color: #FF2400; /* Change text color on hover */
+            color: #FF2400; 
         }
 
         .footer-button:focus {
@@ -65,14 +64,13 @@
         }
 
         .footer-button a {
-            color: white; /* Ensure link color matches button text */
-            text-decoration: none; /* Remove underline */
+            color: white; 
+            text-decoration: none; 
         }
     </style>
 </head>
 <body>
     <div class="main-content">
-        <!-- Your main content goes here -->
     </div>
     <div class="footer">
         <button class="footer-button">
@@ -82,7 +80,7 @@
             </a>
         </button>
         <button class="footer-button">
-            <a href="/favorites">
+            <a href="/favorite">
                 <i class="fas fa-star"></i>
                 Favorite
             </a>

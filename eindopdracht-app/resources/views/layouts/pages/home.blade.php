@@ -6,15 +6,14 @@
     @foreach ($movies as $movie)
         <div class="movie-item">
             <li>{{ $movie->title }}</li>
+            <br>
+            <img src="{{ route('getPoster', $movie->id) }}" alt="Movie Poster" style="max-width: 100%; height: auto;">
             <a href="{{ route('addfavorite', $movie->id) }}" style="text-decoration: none;">
                 <button>ADD TO FAVORITES</button>
             </a>
-            <br>
-            <img src="{{ route('getPoster', $movie->id) }}" alt="Movie Poster" style="max-width: 100%; height: auto;">
         </div>
     @endforeach
 
-    <!-- Simulating more content for scrolling -->
     @for ($i = 0; $i < 0; $i++)
         <div class="movie-item">
             <li>Movie Title {{ $i + 1 }}</li>
@@ -35,6 +34,7 @@ body {
     align-items: center; /* Center items vertically */
     background-color: #f0f0f0; /* Optional: background color for the page */
     min-height: 100vh; /* Ensure body at least takes full viewport height */
+    overflow: scroll;
 }
 
 .movie-container {
